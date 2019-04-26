@@ -13,9 +13,9 @@ import { Component, OnInit } from "@angular/core";
     <section-seven></section-seven>
     <page-footer></page-footer>
   `,
-  styleUrls: ["./3.home.component.scss"]
+  styleUrls: ["./3.composite.component.scss"]
 })
-export class HomeComponent implements OnInit {
+export class CompositeComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
