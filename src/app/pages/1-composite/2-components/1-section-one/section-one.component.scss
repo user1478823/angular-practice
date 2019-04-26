@@ -1,0 +1,87 @@
+@import "fonts";
+@import "colors";
+
+section {
+  text-align: center;
+  padding: 4em 0;
+  color: black;
+
+  background-color: $bg-color;
+
+  display: grid;
+  justify-content: center;
+  grid-gap: 1em;
+  grid-template-columns: repeat(4, max-width(100px));
+  grid-template-areas:
+    "title          title         title         title"
+    "body           body          body          body"
+    "one-image      one-image     two-image     two-image"
+    "one-title      one-title     two-title     two-title"
+    "one-body       one-body      two-body      two-body"
+    "three-image    three-image   four-image    four-image"
+    "three-title    three-title   four-title    four-title"
+    "three-body     three-body    four-body     four-body";
+
+  * {
+    justify-self: center;
+  }
+
+  .body {
+    grid-area: body;
+    padding-top: 1em;
+    padding-bottom: 2em;
+    width: 90%;
+
+    @media (min-width: 980px) {
+      width: 80%;
+    }
+
+    @media (min-width: 1280px) {
+      width: 60%;
+    }
+  }
+
+  .fa {
+    font-size: 30px;
+    color: white;
+  }
+
+  .fa-bg {
+    margin-top: 1.5em;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    background: $primary-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s;
+
+    &:hover {
+      transform: rotate(360deg);
+    }
+  }
+
+  @media (min-width: 768px) {
+    grid-column-gap: 5em;
+    grid-template-columns: repeat(4, max-width(125px));
+  }
+
+  @media (min-width: 980px) {
+    grid-template-columns: repeat(4, max-width(150px));
+  }
+
+  @media (min-width: 1280px) {
+    grid-template-columns: repeat(4, max-width(250px));
+    grid-template-areas:
+      "title          title        title         title"
+      "body           body         body          body"
+      "one-image      two-image    three-image   four-image"
+      "one-title      two-title    three-title   four-title"
+      "one-body       two-body     three-body    four-body"
+  }
+
+  @media (min-width: 1680px) {
+    grid-template-columns: repeat(4, max-width(300px));
+  }
+}
