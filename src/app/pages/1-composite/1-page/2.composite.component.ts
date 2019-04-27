@@ -10,8 +10,6 @@ import { Component, OnInit } from "@angular/core";
       <section-three></section-three>
       <section-four></section-four>
       <section-five></section-five>
-      <section-six></section-six>
-      <section-seven></section-seven>
       <page-footer></page-footer>
     </main>
   `,
