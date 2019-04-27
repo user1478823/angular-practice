@@ -1,4 +1,10 @@
 import { Component, OnInit } from "@angular/core";
+import {
+  faPhone,
+  faEnvelope,
+  faGlobe,
+  faMapMarker
+} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: "section-five",
@@ -7,6 +13,11 @@ import { Component, OnInit } from "@angular/core";
 })
 export class SectionFiveComponent implements OnInit {
   constructor() {}
+
+  faPhone     = faPhone;
+  faEnvelope  = faEnvelope;
+  faGlobe     = faGlobe;
+  faMapMarker = faMapMarker;
 
   ngOnInit() {}
 }
