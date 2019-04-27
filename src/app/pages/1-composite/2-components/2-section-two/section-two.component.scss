@@ -1,0 +1,137 @@
+@import "fonts";
+@import "colors";
+
+section {
+  padding: 4em 2em;
+  color: black;
+  background-color: white;
+  display: grid;
+  row-gap: 1em;
+  column-gap: 5em;
+  justify-content: center;
+  grid-template-columns: 350px;
+  grid-template-areas:
+    "title"
+    "body"
+    "one"
+    "two";
+
+  * {
+    justify-self: center;
+  }
+
+  .body {
+    text-align: center;
+    grid-area: body;
+    padding-top: 1em;
+    padding-bottom: 3em;
+    width: 90%;
+
+    @media (min-width: 980px) {
+      width: 80%;
+    }
+
+    @media (min-width: 1280px) {
+      width: 60%;
+    }
+  }
+
+  .one {
+    grid-area: one;
+    width: 100%;
+  }
+
+  .sub-title {
+    padding: 0.5em 0 2em 0;
+    font-weight: 300;
+    letter-spacing: 2px;
+  }
+
+  .two {
+    grid-area: two;
+    width: 100%;
+
+    @media (max-width: 980px) {
+      padding-top: 2em;
+    }
+  }
+
+  .bar-bg {
+    position: relative;
+    margin-top: 48px;
+    margin-bottom: 80px;
+    width: 550px;
+    height: 2px;
+    background-color: #eee;
+    width: 350px;
+
+    @media (min-width: 576px) {
+      width: 400px;
+    }
+
+    @media (min-width: 768px) {
+      width: 600px;
+    }
+
+    @media (min-width: 980px) {
+      width: 300px;
+    }
+
+    @media (min-width: 1280px) {
+      width: 500px;
+    }
+  }
+
+  .description {
+    position: absolute;
+    top: -35px;
+    left: 10px;
+  }
+
+  .bar {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background-color: $primary-color;
+  }
+
+  .percentage-bg {
+    width: 50px;
+    height: 50px;
+
+    position: absolute;
+    top: -48px;
+    right: 0;
+
+    display: grid;
+    text-align: center;
+    align-items: center;
+  }
+
+
+
+
+  @media (min-width: 576px) {
+    grid-template-columns: 400px;
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: 600px;
+  }
+
+  @media (min-width: 980px) {
+    grid-template-columns: 350px 350px;
+    grid-template-areas:
+      "title          title"
+      "body           body"
+      "one            two";
+  }
+
+  @media (min-width: 1280px) {
+    grid-template-columns: 550px 550px;
+  }
+
+  @media (min-width: 1680px) {
+    grid-template-columns: 600px 600px;
+  }
+}

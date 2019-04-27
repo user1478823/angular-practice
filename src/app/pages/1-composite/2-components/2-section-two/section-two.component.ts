@@ -8,5 +8,12 @@ import { Component, OnInit } from "@angular/core";
 export class SectionTwoComponent implements OnInit {
   constructor() {}
 
+  public bars = [
+    { name: "WEB DESIGN", percentage: "90" },
+    { name: "DEVELOPMENT", percentage: "80" },
+    { name: "PHOTOGRAPHY", percentage: "85" },
+    { name: "MARKETING", percentage: "70" }
+  ];
+
   ngOnInit() {}
 }

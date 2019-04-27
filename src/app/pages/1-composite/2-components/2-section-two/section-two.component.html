@@ -1,3 +1,32 @@
-<p>
-  section-two works!
-</p>
+<section>
+  <h3 style="grid-area: title">ABOUT US</h3>
+  <p class="body">
+    Etiam elementum laoreet mauris. Ut rutrum feugiat neque. Suspendisse viverra
+    gravida nulla. Duis sed enim vitae metus nonummy venenatis.
+  </p>
+  <div class="one">
+    <h4>We are COMPOSITE</h4>
+    <p class="sub-title">WEB DESIGN & DEVELOPMENT AGENCY</p>
+    <p>
+      Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+      ridiculus mus. Vestibulum dapibus lectus a ligula blandit ac egestas ipsum
+      facilisis toque penatibus et magnis dis parturient montes, nascetur
+      ridiculus mus. Vestibulum dapibus lectus a ligula blandit ac egestas ipsum
+      facilisi.
+      <br />
+      <br />
+      Suspendisse potenti. Etiam elementum laoreet mauris. Ut rutrum feugiat
+      neque. Suspendisse viverra gravida nulla. Duis sed enim vitae metus
+      nonummy venenatis. Curabitur semper rutrum sapien. Mauris luctus.
+    </p>
+  </div>
+  <div class="two">
+    <div class="bar-bg" *ngFor="let bar of bars">
+      <p class="description">{{ bar.name }}</p>
+      <div class="bar" [style.width.%]="bar.percentage"></div>
+      <div class="percentage-bg">
+        <p>{{ bar.percentage }}%</p>
+      </div>
+    </div>
+  </div>
+</section>
