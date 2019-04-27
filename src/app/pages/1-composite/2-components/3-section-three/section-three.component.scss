@@ -41,7 +41,7 @@ section {
     width: 100%;
     height: auto;
     transition: transform 0.3s;
-    &:hover { 
+    &:hover {
     }
   }
 
@@ -52,11 +52,11 @@ section {
   @media (min-width: 980px) {
     grid-template-columns: repeat(4, 125px);
     grid-template-areas:
-    "title          title        title         title"
-    "body           body         body          body"
-    "one-image      two-image    three-image   four-image"
-    "one-title      two-title    three-title   four-title"
-    "one-body       two-body     three-body    four-body";
+      "title          title        title         title"
+      "body           body         body          body"
+      "one-image      two-image    three-image   four-image"
+      "one-title      two-title    three-title   four-title"
+      "one-body       two-body     three-body    four-body";
   }
 
   @media (min-width: 1280px) {
