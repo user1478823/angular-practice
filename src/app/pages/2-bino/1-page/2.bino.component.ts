@@ -3,17 +3,17 @@ import { Component, OnInit } from "@angular/core";
 @Component({
   template: `
     <main>
-      <composite-header></composite-header>
+      <bino-header></bino-header>
       <section-one></section-one>
       <section-two></section-two>
       <section-three></section-three>
       <section-four></section-four>
       <section-five></section-five>
-      <composite-footer></composite-footer>
+      <bino-footer></bino-footer>
     </main>
   `
 })
-export class CompositeComponent implements OnInit {
+export class BinoComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}

@@ -15,8 +15,8 @@ import { SectionFooterComponent } from "../2-components/6-footer/section-footer.
 
 @NgModule({
   declarations: [
-    HeaderComponent,
     CompositeComponent,
+    HeaderComponent,
     SectionOneComponent,
     SectionTwoComponent,
     SectionThreeComponent,
