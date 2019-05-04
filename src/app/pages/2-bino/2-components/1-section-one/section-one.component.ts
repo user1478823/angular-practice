@@ -1,9 +1,9 @@
 import { Component, OnInit } from "@angular/core";
 import {
-  faLaptop,
-  faCog,
-  faFont,
-  faUser
+  faCopy,
+  faCode,
+  faLightbulb,
+  faComments
 } from "@fortawesome/free-solid-svg-icons";
 
 @Component({
@@ -14,10 +14,10 @@ import {
 export class SectionOneComponent implements OnInit {
   constructor() {}
 
-  faLaptop = faLaptop;
-  faCog    = faCog;
-  faFont   = faFont;
-  faUser   = faUser;
+  faCopy = faCopy;
+  faCode    = faCode;
+  faLightbulb   = faLightbulb;
+  faComments   = faComments;
 
   ngOnInit() {}
 }

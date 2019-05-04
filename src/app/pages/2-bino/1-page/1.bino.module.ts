@@ -1,6 +1,7 @@
 import { NgModule }               from "@angular/core";
 import { CommonModule }           from "@angular/common";
 import { RouterModule }           from "@angular/router";
+import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 
 import { BinoComponent }          from "./2.bino.component";
 
@@ -29,6 +30,7 @@ import { SectionFooterComponent } from "../2-components/8-footer/section-footer.
   ],
   imports: [
     CommonModule,
+    FontAwesomeModule,
     RouterModule.forChild([{ path: "two", component: BinoComponent }])
   ]
 })
