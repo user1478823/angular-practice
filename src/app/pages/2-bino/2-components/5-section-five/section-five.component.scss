@@ -1,0 +1,63 @@
+section {
+  height: 600px;
+  width: 100%;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url('./../../../../../assets/bino/teambg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  position: relative;
+  z-index: 1;
+
+  
+
+  .image {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url('./../../../../../assets/bino/teambg2.png');
+
+    display: grid;
+    column-gap: 8em;
+    grid-template-columns: repeat(5, auto);
+    justify-content: center;
+    align-content: center;
+
+    
+
+    
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+
+    img {
+      height: 80px;
+      width: 80px;
+      border-radius: 100%;
+      
+      z-index: 3;
+    }
+
+    #img-one {
+      top: 325px;
+      left: 350px;
+    }
+    #img-two {
+      top: 300px;
+      left: 550px;
+
+    }
+    #img-three {
+      top: 300px;
+      left: 750px;
+    }
+    #img-four {
+      top: 300px;
+      left: 950px;
+    }
+    #img-five {
+      top: 300px;
+      left: 1200px;
+    }
+  }
+}
