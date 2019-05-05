@@ -1,0 +1,163 @@
+@import "colors";
+
+section {
+  text-align: center;
+  padding: 4em 0;
+  color: black;
+
+  display: grid;
+  justify-content: center;
+  grid-gap: 2em;
+  grid-template-columns: 75%;
+    grid-template-areas:
+      "title"
+      "body"
+      "one"
+      "two"
+      "three";
+
+  h2 {
+    color: #797979;
+  }
+
+  .body {
+    grid-area: body;
+    padding-bottom: 2em;
+  }
+
+  .content {
+    position: relative;
+    transition: box-shadow .3s;
+
+    .gray {
+      text-align: center;
+      height: 170px; 
+      background: #999999;
+
+      h4 {
+        padding-top: 2em;
+        color: white;
+      }
+
+      @media (min-width: 576px) {
+        height: 200px;
+
+        h4 {
+          padding-top: 2.5em;
+        }
+      }
+    }
+
+    .circle {
+      position: absolute;
+      height: 150px;
+      width: 150px;
+      border-radius: 100%;
+      background: white;
+      top: 170px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      display: grid;
+      align-content: center;
+
+      h2 {
+        color: #797979; 
+      }
+
+      @media (min-width: 576px) {
+        top: 200px;
+      }
+    }
+
+    .light-gray {
+      padding-top: 100px;
+      background: #f4f5f9;
+
+      .text {
+        padding-bottom: 0.5em;
+        font-weight: 900;
+        color: #797989;
+        font-size: 1rem;
+
+        &:first-child {
+          padding-top: 1em;
+        }
+
+        &:nth-child(4) {
+          padding-bottom: 2em;
+        }
+
+        @media (min-width: 576px) {
+          
+        }
+
+        @media (min-width: 1280px) {
+          font-size: 1.1rem;
+        }
+      }
+
+      button {
+        font-weight: 900;
+        font-size: 0.7em;
+        letter-spacing: 2px;
+        margin-bottom: 3em;
+        padding: 1em 0;
+        width: 15em;
+        color: white;
+        background: #999999;
+        border: 1px solid #999999;
+      }
+    }
+
+    &:hover {
+      box-shadow: 0 0 11px rgba(33,33,33, .2);
+    }
+  }
+
+  .highlighted {
+    .gray {
+      background: $primary-color !important; 
+      
+      h2 {
+        color: $primary-color !important; 
+      }
+    }
+
+    button {
+      background: $primary-color !important;
+      border-color: $primary-color !important;
+    }
+  }
+
+  @media (min-width: 576px) {
+    grid-template-columns: repeat(2, 250px);
+    grid-template-areas:
+      "title    title"
+      "body     body"
+      "one      two"
+      "three    .";
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 300px);
+  }
+
+  @media (min-width: 980px) {
+   
+    grid-template-columns: repeat(3, 300px);
+    grid-template-areas:
+      "title    title   title"
+      "body     body    body"
+      "one      two     three";
+  }
+
+  @media (min-width: 1280px) {
+    padding-top: 8em;
+    grid-template-columns: repeat(3, 320px);
+  }
+
+  @media (min-width: 1680px) {
+    grid-template-columns: repeat(3, 350px);
+  }
+}
