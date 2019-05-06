@@ -10,6 +10,8 @@ import { Component, OnInit } from "@angular/core";
       <section-four></section-four>
       <section-five></section-five>
       <section-six></section-six>
+      <section-seven></section-seven>
+      <section-eight></section-eight>
       <bino-footer></bino-footer>
     </main>
   `

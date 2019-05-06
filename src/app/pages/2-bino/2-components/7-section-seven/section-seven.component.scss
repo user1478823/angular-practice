@@ -1,0 +1,70 @@
+@import "colors";
+
+section {
+  padding: 4em 0;
+  color: white;
+  background-color: $bg-color;
+
+  display: grid;
+  align-items: center;
+  justify-content: center;
+
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "title    title"
+    "body     body"
+    "one      two"
+    "four     three"
+    "six      five"
+    "seven    eight";
+
+  h2 {
+    color: #797979;
+    text-align: center;
+  }
+
+  .body {
+    grid-area: body;
+    padding-top: 1.5em;
+    padding-bottom: 3em;
+    text-align: center;
+    color: black;
+  }
+
+  h3 {
+    padding-top: 10%;
+    padding-left: 10%;
+  }
+  p {
+    padding: 10%;
+    font-size: 0.8rem;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .card {
+    height: 100%;
+    width: 100%;
+    background: $primary-color;
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 980px) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "title    title  title   title"
+      "body     body   body    body"
+      "one      two    three   four"
+      "five     six    seven   eight";
+  }
+
+  @media (min-width: 1280px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

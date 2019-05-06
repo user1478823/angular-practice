@@ -20,6 +20,10 @@ section {
     "five     six"
     "seven    eight";
 
+  h2 {
+    color: #797979;
+  }
+
   .body {
     grid-area: body;
     padding-top: 1.5em;
@@ -39,7 +43,7 @@ section {
   img {
     width: 100%;
     height: auto;
-  } 
+  }
 
   @media (min-width: 768px) {
     grid-template-columns: repeat(2, 250px);

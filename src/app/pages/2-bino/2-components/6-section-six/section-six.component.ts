@@ -1,10 +1,4 @@
 import { Component, OnInit } from "@angular/core";
-import {
-  faCopy,
-  faCode,
-  faLightbulb,
-  faComments
-} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: "section-six",
