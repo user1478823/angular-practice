@@ -2,7 +2,7 @@ import { NgModule }               from "@angular/core";
 import { CommonModule }           from "@angular/common";
 import { RouterModule }           from "@angular/router";
 
-import { HomeComponent }          from "./2.home.component";
+import { HomeComponent }          from "./2.sports.component";
 
 import { HeaderComponent }        from "../2-components/0-header/header.component";
 import { SectionOneComponent }    from "../2-components/1-section-one/section-one.component";
