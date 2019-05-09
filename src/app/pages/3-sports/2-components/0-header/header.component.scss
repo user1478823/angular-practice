@@ -1,7 +1,6 @@
 @import "colors";
 
 header {
-  position: relative;
   text-align: center;
   height: 50vh;
   color: white;
@@ -16,34 +15,13 @@ header {
   align-items: center;
   justify-content: center;
 
+  h1 {
+    padding: 0 1em;
+  }
+
   h4 {
-    color: $primary-color;
-  }
-
-  div {
-    position: absolute;
-    bottom: -70px;
-    z-index: 2;
-    color: black;
-
-    p {
-      padding-top: 1.5em;
-    }
-  }
-
-  button {
-    font-weight: 900;
-    padding: 1em 6em;
-    font-size: 1.1rem;
-    background-color: $primary-color;
-    border: 1px solid $primary-color;
-    border-radius: 30px;
-    transition: 0.3s ease-in;
-
-    &:hover {
-      background-color: darken($primary-color, 8%);
-      border-color: darken($primary-color, 8%);
-    }
+    padding: 1em 2em 0 2em;
+    color: $primary-color;  
   }
 
   @media (min-width: 768px) {
