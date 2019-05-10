@@ -1,0 +1,81 @@
+@import "colors";
+
+section {
+  padding: 8em 2em;
+  color: black;
+  background-color: $bg-color;
+  display: grid;
+  row-gap: 2em;
+  column-gap: 3em;
+  justify-content: center;
+  grid-template-columns: 350px;
+  grid-template-areas:
+    "one"
+    "two";
+
+  .one {
+    grid-area: one;
+    width: 100%;
+
+    div {
+      padding-bottom: 3em;
+      width: 100%;
+
+      display: grid;
+      grid-template-areas:
+        "img title"
+        "img body";
+
+      img {
+        grid-area: img;
+        height: 100px;
+        width: 100px;
+        margin-right: 2em;
+      }
+
+      .title {
+        grid-area: title;
+        font-size: 1rem;
+        padding-bottom: 1em;
+      }
+
+      .body {
+        grid-area: body;
+        text-align: justify;
+      }
+    }
+  }
+
+  @media (min-width: 576px) {
+    grid-template-columns: 400px;
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: 450px;
+  }
+
+  @media (min-width: 980px) {
+    grid-template-columns: 450px 450px;
+    grid-template-areas: "one   two";
+  }
+
+  @media (min-width: 1280px) {
+    grid-template-columns: 600px 600px;
+  }
+
+  @media (min-width: 1680px) {
+    column-gap: 5em;
+  }
+
+  .two {
+    grid-area: two;
+    height: 100%;
+    width: 100%;
+
+    img {
+      padding: 0;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
