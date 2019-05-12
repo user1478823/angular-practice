@@ -1,0 +1,169 @@
+@import "colors";
+
+section {
+  text-align: center;
+  margin: 4em 0;
+  color: black;
+  
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 1em;
+  grid-template-columns: 75%;
+  grid-template-areas:
+    "title"
+    "body"
+    "one"
+    "two"
+    "three" 
+    "four";  
+
+  .main-title {
+    grid-area: title;
+    color: $primary-color;
+    padding-bottom: 1.5em;
+  }
+
+  .body {
+    grid-area: body;
+    padding-bottom: 2em;
+  }
+
+  .content {
+    transition: box-shadow 0.3s;
+    display: relative;
+
+    width: 100%;
+    height: 550px;
+
+    background: #f4f5f9;
+
+    display: grid;
+    grid-template-rows: 100px 200px 100px 150px;
+    grid-template-areas: 
+    "title"
+    "price"
+    "text"
+    "button"
+   ;
+
+    .title {
+      grid-area: title;
+      padding-top: 3em;
+      font-size: 1.2rem;
+    }
+
+    .price-div {
+      grid-area: price;
+
+      .price {
+        padding-top: 0.5em;
+        font-size: 4rem;
+        color: #000;
+      }
+  
+      .per-month {
+        padding-bottom: 1em;
+        font-size: 1rem;
+      }
+    }
+
+    
+
+    .text-div {
+      align-self: center;
+
+      .text {
+        grid-area: text;
+        padding-bottom: 0.5em;
+        font-weight: 900;
+        color: #000;
+        font-size: 1rem;
+  
+        @media (min-width: 1280px) {
+          font-size: 1.1rem;
+        }
+      }
+    }
+
+    button {
+      grid-area: button;
+      align-self: center;
+      justify-self: center;
+      font-weight: 900;
+      font-size: 0.7em;
+      letter-spacing: 2px;
+      padding: 1em 0;
+      width: 15em;
+      color: white;
+      background: #999999;
+      border: 1px solid #999999;
+      border-radius: 30px;
+      transition: 0.2s ease-in;
+
+      &:hover {
+        background: $primary-color;
+        border-color: $primary-color;
+      }
+    }
+
+    &:hover {
+      box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+    }
+  }
+
+  .highlighted {
+    height: 600px !important;
+    width: 100% !important;
+    background: #000 !important;
+
+    .title {
+      color: white;
+    }
+
+    h2 {
+      color: $primary-color !important;
+    }
+
+    .per-month {
+      color: white !important;
+    }
+
+    .text {
+      color: white !important;
+    }
+
+    button {
+      color: #000;
+      background: $primary-color !important;
+      border-color: $primary-color !important;
+
+      &:hover {
+        background: white !important;
+        border-color: white !important;
+      }
+    }
+
+    &:hover {
+      box-shadow: 0 0 8px $primary-color;
+    }
+  }
+
+  @media (min-width: 576px) {
+    grid-template-columns: repeat(2, minmax(auto, 300px));
+    grid-template-areas:
+      "title    title"
+      "body     body"
+      "one      two"
+      "three    four";
+  }
+
+  @media (min-width: 980px) {
+    grid-template-columns: minmax(auto, 275px) minmax(auto, 275px) minmax(auto, 325px) minmax(auto, 275px);
+    grid-template-areas:
+      "title    title   title   title"
+      "body     body    body    body"
+      "one      two     three   four";
+  }
+}
