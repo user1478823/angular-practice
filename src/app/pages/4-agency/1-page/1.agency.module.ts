@@ -2,7 +2,7 @@ import { NgModule }               from "@angular/core";
 import { CommonModule }           from "@angular/common";
 import { RouterModule }           from "@angular/router";
 
-import { HomeComponent }          from "./2.home.component";
+import { AgencyComponent }          from "./2.agency.component";
 
 import { HeaderComponent }        from "../2-components/0-header/header.component";
 import { SectionOneComponent }    from "../2-components/1-section-one/section-one.component";
@@ -17,7 +17,7 @@ import { SectionFooterComponent } from "../2-components/8-footer/section-footer.
 @NgModule({
   declarations: [
     HeaderComponent,
-    HomeComponent,
+    AgencyComponent,
     SectionOneComponent,
     SectionTwoComponent,
     SectionThreeComponent,
@@ -29,7 +29,7 @@ import { SectionFooterComponent } from "../2-components/8-footer/section-footer.
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild([{ path: "four", component: HomeComponent }])
+    RouterModule.forChild([{ path: "four", component: AgencyComponent }])
   ]
 })
 export class PageFour {}

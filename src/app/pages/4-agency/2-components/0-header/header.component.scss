@@ -1,0 +1,60 @@
+@import "colors";
+
+header {
+  text-align: center;
+  height: 50vh;
+  color: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url('./../../../../../assets/agency/header-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    padding: 0.5em 0 1.5em 0;
+  }
+
+  p {
+    grid-area: body;
+    padding-top: 1em;
+    padding-bottom: 3em;
+    width: 90%;
+
+    @media (min-width: 980px) {
+      width: 80%;
+    }
+
+    @media (min-width: 1280px) {
+      width: 60%;
+    }
+  }
+
+  button {
+    font-weight: 900;
+    margin: 1em;
+    padding: 1em 0;
+    width: 15em;
+    color: black;
+    background-color: $primary-color;
+    border: 1px solid $primary-color;
+    
+    transition: 0.3s ease-in;
+
+    &:hover {
+      background-color: darken($color: $primary-color, $amount: 15%);
+      border-color: darken($color: $primary-color, $amount: 15%);
+    }
+  }
+
+  @media (min-width: 768px) {
+    height: 100vh;
+    button {
+      font-size: 1.1rem;
+    }
+  }
+}
