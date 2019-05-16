@@ -1,6 +1,7 @@
 import { NgModule }               from "@angular/core";
 import { CommonModule }           from "@angular/common";
 import { RouterModule }           from "@angular/router";
+import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 
 import { AgencyComponent }          from "./2.agency.component";
 
@@ -29,6 +30,7 @@ import { SectionFooterComponent } from "../2-components/8-footer/section-footer.
   ],
   imports: [
     CommonModule,
+    FontAwesomeModule,
     RouterModule.forChild([{ path: "four", component: AgencyComponent }])
   ]
 })
