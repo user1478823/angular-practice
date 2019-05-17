@@ -14,6 +14,7 @@ import {
 })
 export class SectionOneComponent implements OnInit {
   constructor() {}
+  
   faShoppingCart        = faShoppingCart;
   faLaptop      = faLaptop;
   faLock        = faLock;
