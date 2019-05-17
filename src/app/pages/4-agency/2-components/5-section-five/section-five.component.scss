@@ -1,0 +1,45 @@
+@import "colors";
+
+section {
+  text-align: center;
+  padding: 4em 2em;
+  color: black;
+
+  display: grid;
+  justify-content: center;
+  row-gap: 1em;
+  column-gap: 2em;
+  grid-template-columns: repeat(2, minmax(auto, 300px));
+  grid-template-areas:
+    "title          title"
+    "sub-title      sub-title"
+    "one-image      two-image"
+    "three-image    four-image";
+     
+
+  * {
+    justify-self: center;
+  }
+
+  h2 {
+    grid-area: title;
+  }
+
+  .sub-title {
+    grid-area: sub-title;
+    font-style: italic;
+    padding-bottom: 2em;
+  }
+
+  @media (min-width: 980px) {
+    grid-column-gap: 5em;
+  }
+
+  @media (min-width: 1280px) {
+    grid-template-columns: repeat(4, minmax(auto, 300px));
+    grid-template-areas:
+      "title          title        title         title"
+      "sub-title      sub-title    sub-title     sub-title"
+      "one-image      two-image    three-image   four-image";
+  }
+}
