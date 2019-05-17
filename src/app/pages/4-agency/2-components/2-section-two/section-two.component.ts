@@ -1,4 +1,7 @@
 import { Component, OnInit } from "@angular/core";
+import {
+  faEye
+} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: "section-two",
@@ -7,6 +10,8 @@ import { Component, OnInit } from "@angular/core";
 })
 export class SectionTwoComponent implements OnInit {
   constructor() {}
+
+  faEye    = faEye;
 
   ngOnInit() {}
 }

@@ -8,13 +8,24 @@ section {
 
   display: grid;
   justify-content: center;
-  column-gap: 1em;
-  row-gap: 2em;
+  grid-gap: 1em;
   grid-template-columns: minmax(auto, 300px);
   grid-template-areas:
+    "title"
+    "sub-title"
     "one"
     "two"
     "three";
+
+  h2 {
+    grid-area: title;
+  }
+
+  .sub-title {
+    grid-area: sub-title;
+    font-style: italic;
+    padding-bottom: 2em;
+  }
 
   div {
     width: 100%;
@@ -54,6 +65,9 @@ section {
   @media (min-width: 768px) {
     grid-column-gap: 5em;
     grid-template-columns: minmax(auto, 300px) minmax(auto, 300px) minmax(auto, 300px);
-    grid-template-areas: "one   two   three";
+    grid-template-areas: 
+      "title        title         title"
+      "sub-title    sub-title     sub-title"
+      "one          two           three";
   }
 }
