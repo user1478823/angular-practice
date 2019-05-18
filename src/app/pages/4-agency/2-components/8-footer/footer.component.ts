@@ -6,11 +6,11 @@ import {
 } from "@fortawesome/fontawesome-free-brands";
 
 @Component({
-  selector: "section-four",
-  templateUrl: "./section-four.component.html",
-  styleUrls: ["./section-four.component.scss", "./../../1-page/fonts.scss"]
+  selector: "agency-footer",
+  templateUrl: "./footer.component.html",
+  styleUrls: ["./footer.component.scss", "./../../1-page/fonts.scss"]
 })
-export class SectionFourComponent implements OnInit {
+export class FooterComponent implements OnInit {
   constructor() {}
 
   faFacebookF   = faFacebookF;

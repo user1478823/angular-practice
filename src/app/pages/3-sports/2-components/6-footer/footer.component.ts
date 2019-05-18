@@ -8,10 +8,10 @@ import {
 
 @Component({
   selector: "sports-footer",
-  templateUrl: "./section-footer.component.html",
-  styleUrls: ["./section-footer.component.scss", "./../../1-page/fonts.scss"]
+  templateUrl: "./footer.component.html",
+  styleUrls: ["./footer.component.scss", "./../../1-page/fonts.scss"]
 })
-export class SectionFooterComponent implements OnInit {
+export class FooterComponent implements OnInit {
   constructor() {}
 
   faFacebookF = faFacebookF;

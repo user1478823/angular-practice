@@ -14,7 +14,7 @@ import { SectionFiveComponent }   from "../2-components/5-section-five/section-f
 import { SectionSixComponent }    from "../2-components/6-section-six/section-six.component";
 import { SectionSevenComponent }  from "../2-components/7-section-seven/section-seven.component";
 import { SectionEightComponent }  from "../2-components/8-section-eight/section-eight.component";
-import { SectionFooterComponent } from "../2-components/9-footer/section-footer.component";
+import { FooterComponent } from "../2-components/9-footer/footer.component";
 
 @NgModule({
   declarations: [
@@ -28,7 +28,7 @@ import { SectionFooterComponent } from "../2-components/9-footer/section-footer.
     SectionSixComponent,
     SectionSevenComponent,
     SectionEightComponent,
-    SectionFooterComponent
+    FooterComponent
   ],
   imports: [
     CommonModule,

@@ -8,10 +8,10 @@ import {
 
 @Component({
   selector: "bino-footer",
-  templateUrl: "./section-footer.component.html",
-  styleUrls: ["./section-footer.component.scss"]
+  templateUrl: "./footer.component.html",
+  styleUrls: ["./footer.component.scss"]
 })
-export class SectionFooterComponent implements OnInit {
+export class FooterComponent implements OnInit {
   constructor() {}
 
   faFacebookF = faFacebookF;

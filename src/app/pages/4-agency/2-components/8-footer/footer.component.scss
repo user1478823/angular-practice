@@ -1,0 +1,88 @@
+@import "colors";
+
+footer {
+  padding: 2em 0;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+    "copy"
+    "social"
+    "links";
+
+  .copyright {
+    grid-area: copy;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .social {
+    
+    grid-area: social;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .fa-bg {
+      margin: 1.5em 0.5em;
+      height: 50px;
+      width: 50px;
+      background: black;
+      border-radius: 100%;
+
+      display: grid;
+      align-items: center;
+      justify-items: center;
+
+      .fa {
+        font-size: 20px;
+        color: white;
+        transition: 0.3s ease-in;
+      }
+
+      &:hover {
+        .fa {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+
+  .links {
+    grid-area: links;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      text-decoration: none;
+      color: $primary-color;
+    }
+
+    a:nth-child(2) {
+      margin-left: 1em;
+    }
+  }
+
+  @media (max-width: 768px) {
+    justify-items: center;
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "copy social links";
+
+    .copyright {
+      justify-self: right;
+    }
+
+    .links {
+      justify-content: left;
+    }
+  }
+}
