@@ -46,8 +46,8 @@ header {
     transition: 0.3s ease-in;
 
     &:hover {
-      background-color: darken($color: $primary-color, $amount: 15%);
-      border-color: darken($color: $primary-color, $amount: 15%);
+      background-color: #fec503;
+      border-color: #fec503;
     }
   }
 
