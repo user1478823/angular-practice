@@ -1,0 +1,78 @@
+@import "./../../1-page/colors.scss";
+
+section {
+  padding: 6em 2em 0 2em;
+  color: black;
+  background-color: $bg-color;
+  display: grid;
+  row-gap: 6em;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: minmax(auto, 600px);
+  grid-template-areas:
+    "one"
+    "two";
+
+    
+
+  .two {
+    padding-bottom: 5em;
+    grid-area: two;
+
+    position: relative;
+    
+    .back {
+      width: 100%;
+      height: auto;
+    }
+
+    .front {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
+  }
+
+  .one {
+    padding-bottom: 5em;
+    grid-area: one;
+    width: 100%;
+
+    h3 {
+      padding-bottom: 1em;
+    }
+
+    button {
+      font-weight: 900;
+      margin-top: 3em;
+      padding: 1em 0;
+      width: 180px;
+      letter-spacing: 1px;
+      color: black;
+      background-color: $primary-color;
+      border: 3px solid $primary-color;
+      border-radius: 30px;
+      transition: 0.3s ease-in;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+
+  @media (min-width: 576px) {
+    row-gap: 2em;
+  }
+
+  @media (min-width: 980px) {
+    column-gap: 2em;
+    grid-template-columns: minmax(auto, 550px) 550px;
+    grid-template-areas: "one   two";
+  }
+
+  @media (min-width: 1280px) {
+    column-gap: 5em;
+  }
+}
