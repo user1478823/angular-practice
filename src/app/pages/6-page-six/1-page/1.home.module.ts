@@ -29,7 +29,7 @@ import { SectionFooterComponent } from "../2-components/8-footer/section-footer.
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild([{ path: "five", component: HomeComponent }])
+    RouterModule.forChild([{ path: "six", component: HomeComponent }])
   ]
 }) 
-export class PageFive {}
+export class PageSix {}

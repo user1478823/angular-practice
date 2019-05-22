@@ -8,7 +8,8 @@ import { CompositeModule } from "./pages/1-composite/1-page/1.composite.module";
 import { PageTwo } from "./pages/2-bino/1-page/1.bino.module";
 import { PageThree } from "./pages/3-sports/1-page/1.sports.module";
 import { PageFour } from "./pages/4-agency/1-page/1.agency.module";
-import { PageFive } from "./pages/5-page-five/1-page/1.home.module";
+import { PageFive } from "./pages/5-construction/1-page/1.construction.module";
+import { PageSix } from "./pages/6-page-six/1-page/1.home.module";
 
 @NgModule({
   declarations: [AppComponent, routingComponents],
@@ -19,7 +20,8 @@ import { PageFive } from "./pages/5-page-five/1-page/1.home.module";
     PageTwo,
     PageThree,
     PageFour,
-    PageFive
+    PageFive,
+    PageSix
   ],
   providers: [],
   bootstrap: [AppComponent]

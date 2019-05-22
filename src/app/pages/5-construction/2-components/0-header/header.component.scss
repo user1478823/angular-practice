@@ -1,0 +1,82 @@
+@import "colors";
+
+header {
+  text-align: center;
+  height: 50vh;
+  color: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('./../../../../../assets/construction/slider_img3.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    padding: 0.2em 0 0.3em 0;
+    color: $primary-color;
+  }
+
+  h2 {
+    padding-bottom: 1em;
+  }
+
+  p {
+    grid-area: body;
+    padding-top: 1em;
+    padding-bottom: 3em;
+    width: 90%;
+
+    @media (min-width: 980px) {
+      width: 80%;
+    }
+
+    @media (min-width: 1280px) {
+      width: 60%;
+    }
+  }
+
+  .button {
+    font-weight: 900;
+    margin: 1em;
+    padding: 1em 0;
+    width: 200px;
+    letter-spacing: 1px;
+
+    border: 3px solid $primary-color;
+    border-radius: 30px;
+    transition: 0.3s ease-in;
+  }
+
+  button:nth-child(1){
+    @extend .button;
+    color: white;
+    background-color: transparent;
+
+    &:hover {
+      color: black;
+      background-color: $primary-color;
+    }
+  }
+
+  button:nth-child(2){
+    @extend .button;
+    color: black;
+    background-color: $primary-color;
+
+    &:hover {
+      color: white;
+      background-color: transparent;
+    }
+  }
+
+  @media (min-width: 768px) {
+    height: 100vh;
+    button {
+      font-size: 1.1rem;
+    }
+  }
+}
