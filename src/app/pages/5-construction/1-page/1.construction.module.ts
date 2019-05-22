@@ -1,6 +1,7 @@
 import { NgModule }               from "@angular/core";
 import { CommonModule }           from "@angular/common";
 import { RouterModule }           from "@angular/router";
+import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 
 import { ConstructionComponent }          from "./2.construction.component";
 
@@ -29,6 +30,7 @@ import { FooterComponent } from "../2-components/8-footer/footer.component";
   ],
   imports: [
     CommonModule,
+    FontAwesomeModule,
     RouterModule.forChild([{ path: "five", component: ConstructionComponent }])
   ]
 }) 
