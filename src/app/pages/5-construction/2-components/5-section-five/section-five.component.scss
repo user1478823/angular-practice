@@ -4,7 +4,11 @@ section {
   padding: 6em 2em;
   color: black;
 
-  background-color: $bg-color;
+  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
+    url('./../../../../../assets/construction/testimonial_bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 
   display: grid;
   justify-content: center;

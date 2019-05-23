@@ -95,7 +95,7 @@ section {
   @media (min-width: 1280px) {
     grid-gap: 2.5em;
     grid-template-columns: repeat(4, 250px);
-    grid-template-areas: 
+    grid-template-areas:
       "title-div    title-div   title-div   title-div"
       "one          two         three       four";
   }
