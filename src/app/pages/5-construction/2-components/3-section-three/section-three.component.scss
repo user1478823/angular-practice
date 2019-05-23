@@ -1,0 +1,83 @@
+@import "./../../1-page/colors.scss";
+
+section {
+  padding: 6em 2em;
+  color: black;
+
+  background-color: $bg-color;
+
+  display: grid;
+  justify-content: center;
+  grid-gap: 2em;
+  grid-template-columns: repeat(2, minmax(auto, 250px));
+  grid-template-areas:
+    "title        title"
+    "one          one"
+    " two three        ";
+
+  h3 {
+    grid-area: title;
+    padding-bottom: 1.5em;
+    justify-self: center;
+  }
+
+  div {
+
+    img {
+      width: 100%;
+      height: auto;
+      transition: all 0.4s;
+    }
+    
+    .title {
+      font-size: 1.1rem;
+      padding: 2em 0 1.5em 0;
+      transition: all 0.4s;
+    }
+
+    button {
+      font-weight: 900;
+      margin: 3em 0;
+      padding: 1em 0;
+      width: 180px;
+      letter-spacing: 1px;
+      color: black;
+      background-color: $primary-color;
+      border: 3px solid $primary-color;
+      border-radius: 30px;
+      transition: 0.3s ease-in;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+
+    &:hover {
+      img {
+        box-shadow: 0 0 0 8px #fadb64;
+      }
+
+      .title {
+        color: $primary-color;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+  }
+
+  @media (min-width: 980px) {
+    grid-template-columns: repeat(3, minmax(auto, 300px));
+    grid-template-areas: 
+      "title        title       title"
+      "one          two         three";
+  }
+
+  @media (min-width: 1280px) {
+    grid-gap: 2.5em;
+    grid-template-columns: repeat(3, 375px);
+    grid-template-areas: 
+      "title        title       title"
+      "one          two         three";
+  }
+}
