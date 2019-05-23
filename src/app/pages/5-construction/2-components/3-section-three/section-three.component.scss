@@ -13,7 +13,7 @@ section {
   grid-template-areas:
     "title        title"
     "one          one"
-    " two three        ";
+    "two          three";
 
   h3 {
     grid-area: title;
@@ -63,9 +63,6 @@ section {
     }
   }
 
-  @media (min-width: 768px) {
-  }
-
   @media (min-width: 980px) {
     grid-template-columns: repeat(3, minmax(auto, 300px));
     grid-template-areas: 
@@ -74,10 +71,6 @@ section {
   }
 
   @media (min-width: 1280px) {
-    grid-gap: 2.5em;
     grid-template-columns: repeat(3, 375px);
-    grid-template-areas: 
-      "title        title       title"
-      "one          two         three";
-  }
+  }    
 }
