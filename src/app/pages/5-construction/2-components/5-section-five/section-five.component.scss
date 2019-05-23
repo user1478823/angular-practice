@@ -1,0 +1,82 @@
+@import "./../../1-page/colors.scss";
+
+section {
+  padding: 6em 2em;
+  color: black;
+
+  background-color: $bg-color;
+
+  display: grid;
+  justify-content: center;
+  grid-gap: 2em;
+  grid-template-columns: repeat(2, minmax(auto, 250px));
+  grid-template-areas:
+    "title        title"
+    "one          two"
+    "three        three";
+
+    h3 {
+      grid-area: title;
+      text-align: center;
+      padding-bottom: 2em;
+    }
+
+  .content {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+    .testimonial {
+      padding: 3em;
+      background: #e5e5e5;
+      border-radius: 30px;
+
+      position: relative;
+      z-index: 1;
+      &:after,
+      &:before {
+        position: absolute;
+        content: "";
+        width: 20px;
+        height: 30px;
+        background: #e5e5e5;
+        bottom: -10px;
+        z-index: -1;
+      }
+
+      &:before {
+        right: 50%;
+        transform: skew(0, 50deg);
+      }
+      
+      &:after {
+        left: 50%;
+        transform: skew(0, -50deg);
+      }
+    }
+
+    img {
+      margin-top: 3em;
+      margin-bottom: 1em;
+      border-radius: 100%;
+      transition: all 0.4s;
+    }
+
+    &:hover {
+      img {
+        box-shadow: 0 0 0 8px #fadb64;
+      }
+    }
+  }
+
+  @media (min-width: 980px) {
+    grid-template-columns: repeat(3, minmax(auto, 300px));
+    grid-template-areas:
+      "title        title       title"
+      "one          two         three";
+  }
+
+  @media (min-width: 1280px) {
+    grid-template-columns: repeat(3, 350px);
+  }
+}

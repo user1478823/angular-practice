@@ -22,13 +22,12 @@ section {
   }
 
   div {
-
     img {
       width: 100%;
       height: auto;
       transition: all 0.4s;
     }
-    
+
     .title {
       font-size: 1.1rem;
       padding: 2em 0 1.5em 0;
@@ -65,12 +64,12 @@ section {
 
   @media (min-width: 980px) {
     grid-template-columns: repeat(3, minmax(auto, 300px));
-    grid-template-areas: 
+    grid-template-areas:
       "title        title       title"
       "one          two         three";
   }
 
   @media (min-width: 1280px) {
     grid-template-columns: repeat(3, 375px);
-  }    
+  }
 }
