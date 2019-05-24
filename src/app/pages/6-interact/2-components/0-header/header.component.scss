@@ -1,0 +1,60 @@
+@import "./../../1-page/colors.scss";
+
+header {
+  text-align: center;
+  height: 100vh;
+  color: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("./../../../../../assets/interact/intro-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    padding: 0.2em 0 0.3em 0;
+    color: white;
+  }
+
+  p {
+    padding-bottom: 2em;
+    font-size: 1.1rem;
+    width: 75%;
+
+    @media (min-width: 980px) {
+      font-size: 1.3rem;
+      width: 50%;
+    }
+  }
+
+  button {
+    font-weight: 900;
+    margin: 1em;
+    padding: 1em 0;
+    width: 180px;
+    letter-spacing: 1px;
+
+    border: none;
+    border-radius: 30px;
+    transition: all 0.5s linear;
+
+    color: white;
+    background-color: #5ca9fb;
+    background-image: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%);
+
+    &:hover {
+      background-image: none;
+      background-color: #6372ff;
+    }
+  }
+
+  @media (min-width: 768px) {
+    button {
+      font-size: 0.9rem;
+    }
+  }
+}

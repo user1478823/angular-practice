@@ -1,22 +1,18 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Raleway");
 
 * {
-  font-family: "Montserrat", cursive;
+  font-family: "Raleway", cursive;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 4.3rem;
   letter-spacing: 2px;
 
   @media screen and (min-width: 768px) {
-    font-size: 3rem;
+    font-size: 4.5rem;
   }
 
   @media (min-width: 1280px) {
-    font-size: 4rem;
-  }
-
-  @media (min-width: 1680px) {
     font-size: 5rem;
   }
 }
