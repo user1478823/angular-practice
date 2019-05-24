@@ -2,7 +2,7 @@ import { NgModule }               from "@angular/core";
 import { CommonModule }           from "@angular/common";
 import { RouterModule }           from "@angular/router";
 
-import { HomeComponent }          from "./2.home.component";
+import { UbutiaComponent }          from "./2.ubutia.component";
 
 import { HeaderComponent }        from "../2-components/0-header/header.component";
 import { SectionOneComponent }    from "../2-components/1-section-one/section-one.component";
@@ -12,12 +12,12 @@ import { SectionFourComponent }   from "../2-components/4-section-four/section-f
 import { SectionFiveComponent }   from "../2-components/5-section-five/section-five.component";
 import { SectionSixComponent }    from "../2-components/6-section-six/section-six.component";
 import { SectionSevenComponent }  from "../2-components/7-section-seven/section-seven.component";
-import { SectionFooterComponent } from "../2-components/8-footer/section-footer.component";
+import { SectionFooterComponent } from "../2-components/8-footer/footer.component";
 
 @NgModule({
   declarations: [
+    UbutiaComponent,
     HeaderComponent,
-    HomeComponent,
     SectionOneComponent,
     SectionTwoComponent,
     SectionThreeComponent,
@@ -29,7 +29,7 @@ import { SectionFooterComponent } from "../2-components/8-footer/section-footer.
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild([{ path: "six", component: HomeComponent }])
+    RouterModule.forChild([{ path: "seven", component: UbutiaComponent }])
   ]
 }) 
-export class PageSix {}
+export class PageSeven {}

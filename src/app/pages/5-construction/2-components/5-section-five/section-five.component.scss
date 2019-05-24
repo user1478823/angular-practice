@@ -13,11 +13,12 @@ section {
   display: grid;
   justify-content: center;
   grid-gap: 2em;
-  grid-template-columns: repeat(2, minmax(auto, 250px));
+  grid-template-columns: 80%;
   grid-template-areas:
-    "title        title"
-    "one          two"
-    "three        three";
+    "title"
+    "one"
+    "two"
+    "three";
 
     h3 {
       grid-area: title;
@@ -71,6 +72,14 @@ section {
         box-shadow: 0 0 0 8px #fadb64;
       }
     }
+  }
+
+  @media (min-width: 576px) {
+    grid-template-columns: repeat(2, minmax(auto, 250px));
+    grid-template-areas:
+      "title        title"
+      "one          two"
+      "three        three";
   }
 
   @media (min-width: 980px) {
