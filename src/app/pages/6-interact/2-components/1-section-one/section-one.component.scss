@@ -3,8 +3,6 @@
 section {
   text-align: center;
   padding: 4em 2em;
-  color: black;
-
   background-color: $bg-color;
 
   display: grid;
@@ -20,7 +18,6 @@ section {
   h3 {
     margin-bottom: 1.5em;
     position: relative;
-    font-family: "Raleway";
 
     &:after {
       content: "";

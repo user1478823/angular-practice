@@ -3,7 +3,6 @@
 header {
   text-align: center;
   height: 100vh;
-  color: white;
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url("./../../../../../assets/interact/intro-bg.jpg");
   background-size: cover;
@@ -17,12 +16,14 @@ header {
 
   h1 {
     padding: 0.2em 0 0.3em 0;
-    color: white;
+    color: white !important;
   }
 
   p {
     padding-bottom: 2em;
+    color: white !important;
     font-size: 1.1rem;
+    line-height: 30px;
     width: 75%;
 
     @media (min-width: 980px) {
@@ -32,7 +33,7 @@ header {
   }
 
   button {
-    font-weight: 900;
+    font-weight: 600;
     margin: 1em;
     padding: 1em 0;
     width: 180px;
