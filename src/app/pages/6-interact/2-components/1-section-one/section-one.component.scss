@@ -69,10 +69,7 @@ section {
   @media (min-width: 768px) {
     column-gap: 5em;
   }
-
-  @media (min-width: 980px) {
-  }
-
+  
   @media (min-width: 1280px) {
     grid-template-columns: repeat(4, 250px);
     grid-template-areas:
