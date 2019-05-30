@@ -1,0 +1,98 @@
+@import "./../../1-page/colors.scss";
+
+section {
+  text-align: center;
+  padding: 4em 2em;
+  background-color: #5ca9fb;
+  background-image: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%);
+
+  display: grid;
+  justify-content: center;
+  column-gap: 2em;
+  row-gap: 5em;
+  grid-template-columns: repeat(2, minmax(auto, 250px));
+  grid-template-areas:
+    "title          title"
+    "one            two"
+    "three          four"
+    "five           six";
+
+  h3 {
+    color: white;
+    position: relative;
+
+    &:after {
+      content: "";
+      height: 5px;
+      width: 75px;
+      background-color: rgba(255,255,255,.4);
+
+      position: absolute;
+      bottom: -0.7em;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }  
+  
+  .content {
+    .fa {
+      font-size: 30px;
+      color: #5ca9fb;
+    }
+  
+    .fa-bg {
+      margin: 0 auto;
+      height: 100px;
+      width: 100px;
+      background: white;
+      border-radius: 100%;
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+    }
+
+    h4 {
+      padding-top: 1em;
+      padding-bottom: 0.5em;
+      color: white;
+    } 
+    
+    p {
+      color: rgba(255,255,255,.75) !important;
+    }
+
+    &:hover {
+      .fa-bg {
+        background-image: none;
+        background-color: #5ca9fb;
+        box-shadow: 0 0 15px rgba(255, 255, 255, .8);
+      }
+
+      .fa {
+        color: white;
+      }
+    }
+  }  
+
+  @media (min-width: 768px) {
+    column-gap: 3em;
+    grid-template-columns: repeat(3, minmax(200px, 250px));
+    grid-template-areas:
+      "title          title        title"
+      "one            two          three"
+      "four           five         six";
+  }
+
+  @media (min-width: 980px) {
+    column-gap: 4em;
+    grid-template-columns: repeat(3, 250px);
+
+  }
+  
+  @media (min-width: 1280px) {
+    column-gap: 5em;
+    grid-template-columns: repeat(3, 300px);
+  }
+}
