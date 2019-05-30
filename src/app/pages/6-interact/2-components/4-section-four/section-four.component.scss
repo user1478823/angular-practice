@@ -1,0 +1,124 @@
+@import "./../../1-page/colors.scss";
+
+section {
+  text-align: center;
+  padding: 4em 2em;
+  color: black;
+  background-color: $bg-color;
+
+  display: grid;
+  grid-gap: 1em;
+  justify-content: center;
+  grid-template-columns: minmax(auto, 400px);
+  grid-template-areas:
+    "title"
+    "one"
+    "two"
+    "three"
+    "four"
+    "five"
+    "six"
+    "seven"
+    "eight"
+    "nine";
+
+  h3 {
+    grid-area: title;
+    margin-bottom: 1.5em;
+    position: relative;
+
+    &:after {
+      content: "";
+      height: 5px;
+      width: 75px;
+      background-color: #5ca9fb;
+      background-image: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%);
+
+      position: absolute;
+      bottom: -0.7em;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  div {
+    width: 100%;
+
+    .img-div {
+      position: relative;
+      width: 100%;
+      height: 250px;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+
+      .fa-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: transparent;
+        background-image: none;
+        z-index: 2;
+        transition: all 1s ease;
+
+        p {
+          position: absolute;
+          width: 100%;
+          top: 110%;
+          margin: 0 auto;
+
+          font-size: 1.1rem !important;
+          letter-spacing: 2px;
+          color: white;
+          visibility: hidden;
+          transition: all 0.2s linear;
+        }
+      }
+
+      &:hover {
+        .fa-overlay {
+          background-color: rgba(99, 114, 255, 0.6);
+          background-image: linear-gradient(
+          to right,
+          rgba(92, 169, 251, 0.8) 0%,
+          rgba(99, 114, 255, 0.2) 100%
+        );
+
+          p {
+            top: 50%;
+            transform: translateY(-50%);
+            visibility: visible;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, minmax(auto, 400px));
+    grid-template-areas:
+      "title        title"
+      "one          two"
+      "three        four"
+      "five         six"
+      "seven        eight"
+      "nine         .";
+  }
+
+  @media (min-width: 980px) {
+    grid-template-columns: repeat(3, minmax(auto, 400px));
+    grid-template-areas:
+      "title        title         title"
+      "one          two           three"
+      "four         five          six"
+      "seven        eight         nine";
+  }
+}
