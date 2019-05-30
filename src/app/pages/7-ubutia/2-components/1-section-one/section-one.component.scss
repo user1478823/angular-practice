@@ -1,3 +1,5 @@
+@import "./../../1-page/colors.scss";
+
 section {
   padding: 4em 2em;
   text-align: center;
@@ -15,7 +17,7 @@ section {
       content: "";
       height: 5px;
       width: 50px;
-      background-color: #62aa94;
+      background-color: $primary-color;
 
       position: absolute;
       bottom: -50px;
