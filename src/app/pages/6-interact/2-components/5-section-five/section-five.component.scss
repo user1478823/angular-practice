@@ -1,0 +1,93 @@
+@import "./../../1-page/colors.scss";
+
+section {
+  padding: 4em 2em;
+  color: black;
+  background-color: $bg-color;
+
+  display: grid;
+  grid-gap: 4em;
+  justify-content: center;
+  grid-template-columns: minmax(auto, 400px);
+  grid-template-areas:
+    "title"
+    "one"
+    "two"
+    "three"
+    "four"
+    "five"
+    "six";
+
+  h3 {
+    grid-area: title;
+    margin-bottom: 1.5em;
+    text-align: center;
+    position: relative;
+
+    &:after {
+      content: "";
+      height: 5px;
+      width: 75px;
+      background-color: #5ca9fb;
+      background-image: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%);
+
+      position: absolute;
+      bottom: -0.7em;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .testimonial {
+    width: 100%;
+    width: 100%;
+
+    display: grid;
+    grid-gap: 1em;
+    grid-auto-columns: auto auto;
+    grid-template-areas: 
+      "img body"
+      "img author";
+
+    img {
+      grid-area: img;
+      width: 60px;
+      height: 60px;
+      border-radius: 100%;
+      transition: all 0.3s linear;
+    }
+
+    .body {
+      grid-area: body;
+    }
+
+    .author {
+      grid-area: author;
+      color: black;
+      font-weight: 600;
+    }
+
+    &:hover {
+      img {
+        box-shadow: 0 0 15px rgba(99, 114, 255, 0.8);
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, minmax(auto, 400px));
+    grid-template-areas:
+      "title        title"
+      "one          two"
+      "three        four"
+      "five         six";
+  }
+
+  @media (min-width: 980px) {
+    grid-template-columns: repeat(3, minmax(auto, 400px));
+    grid-template-areas:
+      "title        title         title"
+      "one          two           three"
+      "four         five          six";
+  }
+}
