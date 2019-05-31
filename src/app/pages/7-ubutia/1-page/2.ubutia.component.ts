@@ -4,9 +4,9 @@ import { Component, OnInit } from "@angular/core";
   selector: "app-home",
   template:
     `<ubutia-header></ubutia-header>     
-    <section-one></section-one>     
-    <section-two></section-two>     
+    <section-one></section-one>         
     <section-three></section-three> 
+    <section-two></section-two>    
     <section-four></section-four>   
     <section-five></section-five>   
     <section-six></section-six>     

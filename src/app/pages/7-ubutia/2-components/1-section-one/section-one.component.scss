@@ -1,8 +1,9 @@
 @import "./../../1-page/colors.scss";
 
 section {
-  padding: 4em 2em;
+  padding: 6em 2em 4em 2em;
   text-align: center;
+  background-color: $bg-color;
 
   display: flex;
   flex-direction: column;
