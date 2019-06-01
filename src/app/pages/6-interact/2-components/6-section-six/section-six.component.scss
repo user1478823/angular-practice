@@ -1,0 +1,68 @@
+@import "./../../1-page/colors.scss";
+
+section {
+  text-align: center;
+  padding: 4em 2em;
+  color: black;
+
+  display: grid;
+  grid-gap: 3em;
+  justify-content: center;
+  grid-template-columns: minmax(auto, 250px);
+  grid-template-areas:
+    "title"
+    "one"
+    "two"
+    "three"
+    "four";
+
+  h3 {
+    grid-area: title;
+    margin-bottom: 1.5em;
+    position: relative;
+
+    &:after {
+      content: "";
+      height: 5px;
+      width: 75px;
+      background-color: #5ca9fb;
+      background-image: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%);
+
+      position: absolute;
+      bottom: -0.7em;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .content {
+    width: 100%;
+    
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .name {
+      padding-top: 0.5em;
+      padding-bottom: 0.2rem;
+      font-size: 1.1rem;
+      color: black;
+    }
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, minmax(auto, 250px));
+    grid-template-areas:
+      "title        title"
+      "one          two"
+      "three        four";
+  }
+
+  @media (min-width: 980px) {
+    grid-template-columns: repeat(4, minmax(auto, 250px));
+    grid-template-areas:
+      "title     title    title    title"
+      "one       two      three    four";
+  }
+}

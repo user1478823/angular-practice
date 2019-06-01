@@ -57,7 +57,7 @@ section {
         z-index: 1;
       }
 
-      .fa-overlay {
+      .overlay {
         position: absolute;
         top: 0;
         left: 0;
@@ -83,7 +83,7 @@ section {
       }
 
       &:hover {
-        .fa-overlay {
+        .overlay {
           background-color: rgba(99, 114, 255, 0.6);
           background-image: linear-gradient(
           to right,
