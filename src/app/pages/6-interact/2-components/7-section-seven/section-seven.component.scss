@@ -1,0 +1,131 @@
+@import "./../../1-page/colors.scss";
+
+section {
+  padding: 4em 2em;
+  background-color: #5ca9fb;
+  background-image: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%);
+
+  display: grid;
+  row-gap: 2em;
+  justify-content: center;
+  grid-template-columns: minmax(auto, 650px);
+  grid-template-areas:
+    "one"
+    "two";
+
+  .one {
+    grid-area: one;
+
+    h3 {
+      color: white;
+      position: relative;
+      margin-bottom: 3em;
+
+      &:after {
+        content: "";
+        height: 5px;
+        width: 75px;
+        background-color: rgba(255,255,255,.4);
+
+        position: absolute;
+        bottom: -0.7em;
+        left: 0;
+      }
+    }
+
+    form {
+      .input-textarea {
+        font-size: 1rem;
+        padding: 1em 0;
+        background-color: #fff;
+        border: 2px solid #fff;
+        text-indent: 10px;
+      }
+    
+      .name {
+        width: 100%;
+    
+        @extend .input-textarea;
+    
+        @media (min-width: 980px) {
+          float: left;
+          width: 48%;
+        }
+      }
+    
+      .email {
+        width: 100%;
+        margin-top: 2em;
+    
+        @extend .input-textarea;
+    
+        @media (min-width: 980px) {
+          margin-top: 0;
+          float: right;
+          width: 48%;
+        }
+      }
+    
+      textarea {
+        margin: 2em 0;
+        width: 100%;
+    
+        @extend .input-textarea;
+      }
+  
+      button {
+        height: 50px;
+        width: 200px;
+        background-color: transparent;
+        border: 2px solid white;
+        border-radius: 30px;
+        color: white;
+        font-size: 1rem;
+        letter-spacing: 1px;
+        transition: 0.2s ease-in;
+
+        &:hover {
+          background-color: white;
+          color: black;
+        }
+      }
+    }
+
+  }
+
+  .two {
+    grid-area: two;
+
+    h4 {
+      padding-top: 2em;
+      padding-bottom: 1em;
+      color: white;
+
+      @media (min-width: 980px) {
+        padding-top: 5.5em;
+      }
+    }
+
+    .highlighted {
+      padding-top: 1em;
+      padding-bottom: 0.5em; 
+      color: white;
+      font-size: 1.1rem;
+    }
+
+    .body {
+      color: rgba(255,255,255,.75) !important;
+    }
+  }
+
+
+  @media (min-width: 980px) {
+    column-gap: 7em;
+    grid-template-columns: minmax(auto, 750px) minmax(auto, 250px);
+    grid-template-areas: "one   two";
+  }
+
+  @media (min-width: 1280px) {
+    column-gap: 10em;
+  }
+}
