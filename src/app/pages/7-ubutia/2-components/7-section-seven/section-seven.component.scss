@@ -1,0 +1,105 @@
+@import "./../../1-page/colors.scss";
+
+section {
+  text-align: center;
+  padding: 4em 2em;
+  background-color: $bg-color;
+
+  display: grid;
+  justify-content: center;
+  column-gap: 2em;
+  grid-template-rows: auto auto 3em auto 3em auto;
+  grid-template-columns: minmax(auto, 370px);
+  grid-template-areas:
+    "title"
+    "one"
+    "."
+    "two"
+    "."
+    "three";
+
+  h3 {
+    position: relative;
+    margin-bottom: 100px;
+
+    &:after {
+      content: "";
+      height: 5px;
+      width: 50px;
+      background-color: $primary-color;
+
+      position: absolute;
+      bottom: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .content {
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    h4 {
+      padding-top: 2.2em;
+      padding-bottom: 1.3em;
+    }
+
+    .social {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      .fa-bg {
+        margin: 2em 0.5em 0 0.5em;
+        height: 45px;
+        width: 45px;
+        background: $primary-color;
+        border: 3px solid $primary-color;
+
+        display: grid;
+        align-items: center;
+        transition: 0.3s ease-in;
+
+        .fa {
+          font-size: 20px;
+          color: white;
+        }
+
+        &:hover {
+          background-color: $bg-color;
+          border-color: $primary-color;
+
+          .fa {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    column-gap: 2em;
+    grid-template-rows: auto auto 5em auto;
+    grid-template-columns: repeat(2, 350px);
+    grid-template-areas:
+      "title      title"
+      "one        two"
+      ".          ."
+      "three      .";
+  }
+
+  @media (min-width: 980px) {
+    column-gap: 2em;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(3, minmax(auto, 350px));
+    grid-template-areas:
+      "title          title        title"
+      "one            two          three";
+  }
+
+  @media (min-width: 1280px) {
+    column-gap: 3em;
+  }
+}

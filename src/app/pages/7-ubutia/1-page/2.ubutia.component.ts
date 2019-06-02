@@ -11,6 +11,7 @@ import { Component, OnInit } from "@angular/core";
     <section-five></section-five>   
     <section-six></section-six>     
     <section-seven></section-seven> 
+    <section-eight></section-eight> 
     <ubutia-footer></ubutia-footer>`
 })
 export class UbutiaComponent implements OnInit {
