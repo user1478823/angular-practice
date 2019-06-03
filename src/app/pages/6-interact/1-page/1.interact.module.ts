@@ -1,9 +1,9 @@
 import { NgModule }               from "@angular/core";
 import { CommonModule }           from "@angular/common";
 import { RouterModule }           from "@angular/router";
-import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
+import { FontAwesomeModule }      from "@fortawesome/angular-fontawesome";
 
-import { InteractComponent }          from "./2.interact.component";
+import { InteractComponent }      from "./2.interact.component";
 
 import { HeaderComponent }        from "../2-components/0-header/header.component";
 import { SectionOneComponent }    from "../2-components/1-section-one/section-one.component";
@@ -13,7 +13,7 @@ import { SectionFourComponent }   from "../2-components/4-section-four/section-f
 import { SectionFiveComponent }   from "../2-components/5-section-five/section-five.component";
 import { SectionSixComponent }    from "../2-components/6-section-six/section-six.component";
 import { SectionSevenComponent }  from "../2-components/7-section-seven/section-seven.component";
-import { SectionFooterComponent } from "../2-components/8-footer/footer.component";
+import { FooterComponent }        from "../2-components/8-footer/footer.component";
 
 @NgModule({
   declarations: [
@@ -26,7 +26,7 @@ import { SectionFooterComponent } from "../2-components/8-footer/footer.componen
     SectionFiveComponent,
     SectionSixComponent,
     SectionSevenComponent,
-    SectionFooterComponent
+    FooterComponent
   ],
   imports: [
     CommonModule,
